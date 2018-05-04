@@ -1,28 +1,178 @@
-.App {
+[v-cloak]{
+  display: none;
+}
+*{
+  -webkit-user-select: none;
+  user-select: none;
+  outline:none
+}
+input,textarea{
+  -webkit-user-select: inherit;
+  user-select: inherit; 
+}
+a,a:focus,a:hover{
+  text-decoration: none;
+}
+[src=""]{
+  /*background-image: url(../assets/default.png);*/
+  background-size: cover;
+}
+#app{
+  display: block!important;
+  overflow: hidden;
+  width: 100%;
+}
+body,html{
+  margin:0;
+  padding:0;
+  overflow-x: hidden;
+}
+p{
+  margin: 0;
+}
+::-webkit-input-placeholder{
+  color: #B3B4B5;
+}
+:-moz-placeholder{
+  color: #B3B4B5;
+}
+:-ms-input-placeholder{
+  color: #B3B4B5;
+}
+.one_line{
+  overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.two_line{
+  display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    white-space: normal !important;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.flex_row{
+  display: flex;
+}
+.flex_column{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.flex_between{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.main_bg{
+  background-color: #EE5C42;
+  color: #fff;
+}
+.main_color{
+  color: #EE5C42;
+}
+.main_border{
+  border-color: #EE5C42;
+}
+.prompt{
+  position: absolute;
+  top: 0;
+  margin: auto;
+  height: 16px;
+  width: 16px;
+  right: -12px;
+  border-radius: 50%;
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/*过渡效果*/
+.Router {
+     position: absolute;
+     width: 100%;
+     height: 100vh;
+     transition: all .3s ease;
+     top: 0;
+     background-color: #fff;
+     overflow: hidden;
+}
+
+
+.slide-left-enter,
+ .slide-right-leave-active {
+  opacity:1;
+    -webkit-transform: translate(100%, 0);
+    transform: translate(100% 0);
+}
+
+.slide-left-leave-active,
+.slide-right-enter {
+  opacity:1;
+  -webkit-transform: translate(-20%, 0);
+    transform: translate(-20% 0);
+}
+.slide-right-enter,.slide-right-enter-active{
+  z-index: -1;
+}
+
+.slide-tabbar-enter,.slide-tabbar-leave-active{
+  transition-duration: 0s;
+}
+
+
+
+/*插件修改css*/
+.swiper-pagination .swiper-pagination-bullet{
+  margin: 4px;
+}
+.swiper-pagination .swiper-pagination-bullet-active{
+  background: #EE5C42;
+}
+
+
+
+.footer_nav {
+  display: flex;
+  background-color: rgba(254,253,252,1);
+  left: 0;
+  right: 0;
+  position: fixed;
+  margin: 0 auto;
+  bottom: 0;
+  z-index: 11;
+  box-shadow: 1px 5px 15px rgba(50,50,50,.3);
+  border-top: 1px solid #dcdcdc;
+  height: 50px;
+  box-sizing: border-box;
+}
+.footer_nav .nav_list {
+  font-size: 12px;
+  line-height: 1;
+  flex: 1;
+  display: flex;
   text-align: center;
+  padding-top: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.footer_nav .nav_list_color{
+  color: #a0a0a0;
 }
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.footer_nav .nav_list span{
+  padding-top: 3px;
 }
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.footer_nav .nav_list_img{
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+  line-height: 1;
+  position: relative;
 }

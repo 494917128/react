@@ -1,0 +1,21 @@
+.myHeader{
+  font-size: 18px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.myHeader > a{
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  padding: 0 5px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 14px;
+}

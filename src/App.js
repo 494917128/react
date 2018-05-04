@@ -1,10 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
-import Header from './header/header'
-import Tabbar from './tabbar/tabbar'
+import Header from './components/header'
+import Tabbar from './components/tabbar'
+
  
-class App extends React.Component {
+class App1 extends React.Component {
   render() {
     return (
       <div className="App">
@@ -16,10 +18,11 @@ class App extends React.Component {
         <p className="App-intro">
           你可以在 <code>src/App.js</code> 文件中修改。
         </p>
+        <Link to="/index">About</Link>
         <Tabbar />
       </div>
     );
   }
 }
  
-export default App;
+export default App1;
